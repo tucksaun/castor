@@ -2,6 +2,8 @@
 
 ## Not released yet
 
+* Distribute static binaries `castor.darwin.arm64` automatically with the
+  release
 * Add support for running Castor on Linux ARM64
 * Add a option `ignoreValidationErrors` on `AsTask` attribute to ignore
   parameters & options validation errors
