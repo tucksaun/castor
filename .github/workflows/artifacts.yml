@@ -1,8 +1,7 @@
 name: Artifacts
 
 on:
-  push:
-    branches: [ "main" ]
+  push: ~
   release:
       types: [ "created" ]
 
@@ -152,14 +151,14 @@ jobs:
           path: ./castor.darwin-arm64
           if-no-files-found: error
 
-  release:
-    name: Upload artifacts to the release
-    if: github.event_name == 'release'
-    needs: [phars, static-linux, static-darwin-amd64, static-darwin-arm64]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+  # release:
+  #   name: Upload artifacts to the release
+  #   if: github.event_name == 'release'
+  #   needs: [phars, static-linux, static-darwin-amd64, static-darwin-arm64]
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v4
 
       - name: retrieve artifacts
         uses: actions/download-artifact@v4
