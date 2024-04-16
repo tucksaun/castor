@@ -2,7 +2,7 @@ name: Debug MacOS ARM64
 
 on:
   push:
-    branches: [ "fix/macos-arm64" ]
+    branches: [ "debug/macos-static-build" ]
 
 permissions:
   contents: write
